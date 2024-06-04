@@ -1,4 +1,8 @@
-## xpwd-extend
+
+<div align = "center">
+<img src="https://images.waer.ltd/notes/20240604103654.png" width="140px" />
+</div>
+
 这是为Rust开源项目[xpwd](https://github.com/08820048/xpwd)开发的谷歌浏览器插件版本，作为其`Fature`中的一个`plan`,用来扩展工具的使用范围，在浏览器中直接使用。
 ### 特点
 
