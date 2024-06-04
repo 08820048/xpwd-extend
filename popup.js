@@ -122,4 +122,15 @@ document.addEventListener('DOMContentLoaded', function() {
   document.getElementById('checkStrengthBtn').addEventListener('click', checkStrength);
 });
 
+// 在 JavaScript 中监听主题切换复选框状态变化
+const themeSwitchToggle = document.getElementById('themeSwitchToggle');
+themeSwitchToggle.addEventListener('change', function() {
+  // 根据复选框的状态，切换样式表链接以更改主题
+  const themeStylesheet = document.getElementById('themeStylesheet');
+  if (this.checked) {
+    themeStylesheet.href = 'styles-dark.css'; // 切换到暗模式样式表
+  } else {
+    themeStylesheet.href = 'styles-light.css'; // 切换到亮模式样式表
+  }
+});
 

@@ -1,0 +1,201 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 20px;
+  width: 300px; /* 设置合适的宽度 */
+  height: 450px;
+
+  
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+  margin-right: 260px;
+}
+
+input, select {
+  padding: 8px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: -5px;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#generatedPassword, #strengthResult {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  word-wrap: break-word; /* 确保长文本换行 */
+  text-align: left !important;
+  margin-left: 0 !important;
+}
+
+form {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* 设置最大宽度以适应小窗口 */
+  width: 100%;
+  text-align: center;
+}
+
+/* 新增样式，覆盖全局样式 */
+p#generatedPassword, p#strengthResult {
+  text-align: left;
+  margin-left: 0;
+}
+
+
+h2 {
+  font-family: 'Foldit', sans-serif; /* 使用颜楷字体 */
+  /* 其他样式 */
+}
+
+
+
+/*  弹窗样式 */
+
+.alert-container {
+  position: fixed;
+  top: 10%; /* 将顶部位置设置为页面垂直中心 */
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(75, 214, 207, 0.5); /* 设置透明度为 50% */
+  box-shadow: 0 2px 4px rgba(238, 14, 14, 0.2);
+  border-radius: 4px;
+  padding: 20px;
+  z-index: 9999; /* 确保弹窗在顶层显示 */
+  opacity: 0; /* 初始状态设为透明 */
+  transition: opacity 0.3s ease; /* 添加过渡动画 */
+}
+
+.alert-container.show {
+  opacity: 0.6; /* 显示弹窗时透明度为 1 */
+}
+/* 密码强度可视化 */
+#strengthWrapper {
+  display: flex;
+  align-items: center;
+  margin-top: -25px;
+}
+
+#strengthIcon {
+  margin-right: 10px;
+  font-size: 16px;
+  display: none; /* 初始不显示 */
+}
+
+#strengthProgressBar {
+  height: 10px;
+  width: 100%;
+  border-radius: 2px;
+  background: linear-gradient(to right, transparent 100%);
+  transition: background 0.5s ease; /* 添加过渡效果 */
+}
+
+/* 弱密码 */
+#strengthProgressBar.weak {
+  background: linear-gradient(to right, red 33%, transparent 33%);
+}
+
+/* 中等密码 */
+#strengthProgressBar.medium {
+  background: linear-gradient(to right, orange 66%, transparent 66%);
+}
+
+/* 强密码 */
+#strengthProgressBar.strong {
+  background: linear-gradient(to right, green 100%, transparent 100%);
+}
+
+/* 显示图标 */
+.show-icon #strengthIcon {
+  display: inline; /* 当类名为show-icon时显示图标 */
+}
+
+
+/* 样式表中添加版本信息样式 */
+.version-info {
+    position: fixed;
+    bottom: 5px;
+    left: 10px; /* 将左下角对齐 */
+    color: gray;
+    /*font-family: 'Foldit', sans-serif; /* 使用 Foldit 字体 */
+    font-size: 12px;
+}
+
+
+/* 主题切换按钮样式 */
+
+.theme-switch-toggle {
+  display: none; /* 隐藏原始复选框 */
+}
+
+/* 滑块样式 */
+.theme-switch-label {
+  display: inline-block;
+  width: 40px; /* 滑块宽度 */
+  height: 20px; /* 滑块高度 */
+  position: relative;
+  cursor: pointer;
+}
+
+.theme-switch-label::before {
+  content: '';
+  position: absolute;
+  
+  width: 100%;
+  height: 100%;
+  background-color: #ccc; /* 滑块背景颜色 */
+  border-radius: 20px; /* 滑块圆角 */
+  transition: background-color 0.3s ease;
+}
+
+.theme-switch-label::after {
+  content: '';
+  position: absolute;
+  top: 2px; /* 滑块垂直居中 */
+  left: 2px; /* 滑块水平居中 */
+  width: 16px; /* 滑块宽度 */
+  height: 16px; /* 滑块高度 */
+  border-radius: 50%; /* 滑块圆形 */
+  background-color: #219df0; /* 滑块颜色 */
+  transition: transform 0.3s ease;
+}
+
+/* 夜间模式下的滑块样式 */
+.theme-switch-toggle:checked + .theme-switch-label::before {
+  background-color: #ebe2e2; /* 夜间模式下的滑块背景颜色 */
+}
+
+.theme-switch-toggle:checked + .theme-switch-label::after {
+  transform: translateX(20px); /* 夜间模式下滑块向右移动 */
+}
