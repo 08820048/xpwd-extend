@@ -1,3 +1,6 @@
+
+
+
 function showAlert(message, duration) {
   // 创建弹窗容器元素
   const alertContainer = document.createElement('div');
@@ -30,6 +33,7 @@ showAlert("欢迎使用xpwd😊",2000)
 
 
 function generatePassword() {
+  //showAlert("调用了函数",3000)
   const length = document.getElementById('length').value || 12;
   const strength = document.getElementById('strength').value || 'medium';
 
@@ -133,4 +137,8 @@ themeSwitchToggle.addEventListener('change', function() {
     themeStylesheet.href = 'styles-light.css'; // 切换到亮模式样式表
   }
 });
+
+
+// 右键菜单
+
 

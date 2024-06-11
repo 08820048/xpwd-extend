@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "xpwd",
   "version": "1.0",
   "description": "Generate and check password strength in Chrome",
@@ -7,14 +7,14 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "browser_action": {
+   "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
     "default_popup": "popup.html",
     "default_icon": {
       "48": "icons/icon48.png",
       "128": "icons/icon128.png"
     }
-  },
-  "permissions": [
-    "activeTab"
-  ]
+  }
 }
