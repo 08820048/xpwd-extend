@@ -15,6 +15,8 @@
 ### 用法
 > 由于区域限制，本插件在谷歌插件应用商店中的上传任务正在紧锣密鼓的进行中...
 
+chrome应用商店安装地址: https://chromewebstore.google.com/detail/emecolaklhnkmjjodcgkcifdnnolndck
+
 具体使用方法见[使用文档](https://github.com/08820048/xpwd/wiki/xpwd%E4%BD%BF%E7%94%A8%E6%96%87%E6%A1%A3)
 
 
